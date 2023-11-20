@@ -18,21 +18,20 @@ def main():
                         default="crazy")
 
     args = parser.parse_args()
-    print(args.personality1)
-    print(args.personality2)
+    
     topic = input("Some statement that Ai will fight about: ")
     msg1 = [
             {"role": "system", "content": f'Your personality is {args.personality1}.'
-                                          f'you answer in two to five sentence'
+                                          f'you answer in two to three'
                                           f'You are a human that love to argue with constructive arguments. '
                                           f'You always disagree with you interlocutor.'},
             {"role": "user", "content": topic}
            ]
     msg2 = [
             {"role": "system", "content": f'Your personality is {args.personality2}.'
-                                          f'you answer in two to five sentence'
-                                          f'You are a human that love to argue with constructive arguments. '
-                                          f'You always disagree with you interlocutor. Your personality is '},
+                                          f'you answer in two to three sentence'
+                                          f'You are a human that love to argue with constructive arguments.'
+                                          f'You always disagree with you interlocutor.'},
             {"role": "assistant", "content": topic}
            ]
 
